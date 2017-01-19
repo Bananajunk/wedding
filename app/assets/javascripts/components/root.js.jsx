@@ -1,7 +1,10 @@
 var Root = React.createClass({
    render: function(){
        return(
-           <div className="root">Hey</div>
+           <div id="root">
+               <Banner />
+               <Schedule />
+           </div>
        );
    }
 });
