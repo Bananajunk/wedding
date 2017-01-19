@@ -3,7 +3,9 @@ var Root = React.createClass({
        return(
            <div id="root">
                <Banner />
-               <Schedule />
+               <div className="container">
+                   <Schedule />
+               </div>
            </div>
        );
    }
