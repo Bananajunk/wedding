@@ -2,10 +2,10 @@ var Event = React.createClass({
     render: function () {
         return (
             <div className="event row">
-                <div className="event-image flex-center col-xs-2">
+                <div className="event-image flex-center col-sm-2 hidden-xs">
                     <img src={this.props.event.image}></img>
                 </div>
-                <div className="event-description flex-center col-xs-8">
+                <div className="event-description flex-center col-sm-8 col-xs-10">
                     <h4>{this.props.event.title}</h4>
                     <p>{this.props.event.description}</p>
                 </div>
