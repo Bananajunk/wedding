@@ -50,7 +50,7 @@ var Schedule = React.createClass({
 
     render: function () {
         return (
-            <div id="schedule" className="container">
+            <div id="schedule" className="section">
                 <div className="row">
                     <h2>Schedule</h2>
                 </div>
