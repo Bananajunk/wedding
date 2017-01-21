@@ -5,8 +5,8 @@ var Root = React.createClass({
                <Banner />
                <div className="container">
                    <Schedule />
-                   <Location />
                </div>
+               <Location />
            </div>
        );
    }

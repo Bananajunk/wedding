@@ -1,15 +1,32 @@
-#location{
+#location {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   .title {
     border-bottom: 2px solid #eeeeee;
+    margin-bottom: 15px;
   }
   .jumbotron {
-    background-image: image-url('alton_mill_wide.jpg');
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    text-align: right;
+    background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)
+    ), image-url('alton_mill_wide.jpg');
     background-size: cover;
-    min-height: 300px;
+    min-height: 500px;
     width: 100%;
+    color: white;
+    text-shadow: 0 1px 0 black;
+    .title {
+      border: none;
+      h3 {
+        margin: 0;
+      }
+    }
   }
 }
