@@ -12,7 +12,9 @@ var LocationThumbnails = React.createClass({
      render: function(){
          let thumbnails = LocationImages.map(function(image, index){
              return (
-                 <img src={image} key={"thumbnail-" + index} onClick={this.props.setSpotlight.bind(null, image)} />
+                 <img src={image} key={"thumbnail-" + index}
+                      onClick={this.props.setSpotlight.bind(null, image)}
+                      onMouseOver={this.props.setSpotlight.bind(null, image)} />
              );
          }.bind(this));
          return (
