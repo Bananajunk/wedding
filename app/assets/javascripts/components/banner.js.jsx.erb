@@ -1,19 +1,20 @@
 var BannerTitle = React.createClass({
-    render: function(){
+    render: function () {
         return (
             <div id="banner-title" className="container">
-                <h1>Samantha & Liam</h1>
-                <h4>August 25th, 2017</h4>
+              <h1>Samantha & Liam</h1>
+              <h4>August 25th, 2017</h4>
+              <img src="<%= asset_path('couple_dancing_icon.svg') %>" className="hidden-xs"/>
             </div>
         );
     }
 });
 
 var Banner = React.createClass({
-    render: function(){
+    render: function () {
         return (
             <div id="banner" className="jumbotron">
-                <BannerTitle />
+              <BannerTitle />
             </div>
         );
     }
