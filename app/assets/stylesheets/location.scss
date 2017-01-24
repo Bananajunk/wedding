@@ -1,32 +1,38 @@
 #location {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  .title {
-    border-bottom: 2px solid #eeeeee;
-    margin-bottom: 15px;
-  }
-  .jumbotron {
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  flex-wrap: wrap;
+  .location-info {
     display: flex;
     flex-direction: column;
-    align-content: center;
-    justify-content: space-between;
-    text-align: right;
-    background-image: linear-gradient(
-                    rgba(0, 0, 0, 0.5),
-                    rgba(0, 0, 0, 0.5)
-    ), image-url('alton_mill_wide.jpg');
-    background-size: cover;
-    min-height: 500px;
-    width: 100%;
-    color: white;
-    text-shadow: 0 1px 0 black;
-    .title {
-      border: none;
-      h3 {
-        margin: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    .location-thumbnails {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      img {
+        width: 100px;
+        border-radius: 50%;
+        cursor: pointer;
       }
+    }
+  }
+  .location-spotlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 350px;
+    img {
+      width: 100%;
+      border-radius: 10px;
     }
   }
 }

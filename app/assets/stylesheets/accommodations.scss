@@ -1,0 +1,30 @@
+#accommodations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .title {
+    border-bottom: 2px solid #eeeeee;
+    margin-bottom: 25px;
+  }
+  .accommodations-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    .icon {
+      width: 100px;
+      height: 100px;
+      &.hotel {
+        background-image: image-url('hotel_icon.svg');
+      }
+      &.bed {
+        background-image: image-url('bed_icon.svg');
+      }
+      &.compass {
+        background-image: image-url('compass_icon.svg');
+      }
+    }
+  }
+}
