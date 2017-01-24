@@ -23,7 +23,7 @@ var Timeline = React.createClass({
             var icon = (index === this.props.selectedEvent) ? 'fa-circle' : 'fa-circle-thin';
             return (
                 <div key={index} className="timeline-item flex-center" onClick={this.props.changeSelected.bind(null, index)}>
-                    <span><i className={"fa " + icon}></i></span>
+                    <span><i className={"fa fa-lg " + icon}></i></span>
                     {event.title}<br/>
                     {event.startTime}
                 </div>
