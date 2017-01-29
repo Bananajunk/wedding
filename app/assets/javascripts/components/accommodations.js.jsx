@@ -9,7 +9,7 @@ var Accommodations = React.createClass({
                     <div className="col-lg-4 accommodations-item">
                         <div className="hotel icon"></div>
                         <h2>BEST WESTERN PLUS Orangeville Inn & Suites</h2>
-                        <p>7 Buena Vista Drive <br/> Orangeville, ON L9W 0A2</p>
+                        <p>(519)941-3311<br/>Reference ‘Samantha-Liam Wedding’ for block booking rate.</p>
                         <a href="http://bestwesternontario.com/hotels/best-western-plus-orangeville-inn-and-suites"
                            className="btn btn-info btn-radius">Visit Website</a>
                     </div>
@@ -40,11 +40,11 @@ var Accommodations = React.createClass({
                             </tr>
                             </tbody>
                         </table>
-                        <p>Reference ‘Samantha-Liam Wedding’ for block booking rate.</p>
                     </div>
                     <div className="col-lg-4 accommodations-item">
                         <div className="compass icon"></div>
                         <h2>Directions</h2>
+                        <p>7 Buena Vista Drive <br/> Orangeville, ON L9W 0A2</p>
                         <a href="https://goo.gl/maps/zisr7dFrb812"
                            className="btn btn-info btn-radius">Get Directions</a>
                     </div>

@@ -39,7 +39,7 @@ var Location = React.createClass({
     render: function () {
         return (
             <div id="location" className="container section">
-                <div className="location-info">
+                <div className="location-info col-md-6 col-sm-12">
                     <h2>Alton Mill Arts Centre</h2>
                     <p className="lead">
                         1402 Queen St. <br/>
@@ -49,7 +49,9 @@ var Location = React.createClass({
                     </p>
                     <LocationThumbnails setSpotlight={this.setSpotlight} />
                 </div>
-                <LocationSpotlight image={this.state.image}/>
+                <div className="col-md-6 col-sm-12">
+                    <LocationSpotlight image={this.state.image}/>
+                </div>
             </div>
         );
     }
