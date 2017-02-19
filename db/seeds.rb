@@ -5,3 +5,68 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Invite.create([
+                 { name: 'Francine John', guest: true, guest_name: 'Rob John' },
+                 { name: 'Brian John', guest: true },
+                 { name: 'Mini Reid', guest: true, guest_name: 'Charles Reid' },
+                 { name: 'Cassy Kubric', guest: true },
+                 { name: 'Guy Coulas', guest: false },
+                 { name: 'Dawn Coulas', guest: true, guest_name: 'Leonard Coulas' },
+                 { name: 'Evelyn John', guest: true, guest_name: 'Derek Betty' },
+                 { name: 'Norbert John', guest: true },
+                 { name: 'Sean Redmond', guest: false },
+                 { name: 'Connor Redmond', guest: false },
+                 { name: 'Paige Redmond', guest: false },
+                 { name: 'Daniel Redmond', guest: true, guest_name: 'Amy Redmond' },
+                 { name: 'Barbara Redmond', guest: true, guest_name: 'Donald Redmond' },
+                 { name: 'Eunice Reid', guest: false },
+                 { name: 'Mary Chiesa', guest: true, guest_name: 'Dino Chiesa' },
+                 { name: 'Karen Elliot', guest: true, guest_name: 'Joff Elliot' },
+                 { name: 'Greg Chiesa', guest: true },
+                 { name: 'Gary Nadon', guest: true, guest_name: 'Moreen Nadon' },
+                 { name: 'Jimmy Redmond', guest: false },
+                 { name: 'Ceryl Stencil', guest: true, guest_name: 'Beeb Nadon' },
+                 { name: 'Mike Albert', guest: true, guest_name: 'Teresa Albert' },
+                 { name: 'Megan Hannath', guest: true },
+                 { name: 'Kristie Somers', guest: false },
+                 { name: 'Kevin Lough', guest: true },
+                 { name: 'Rajeev Sarvaria', guest: false },
+                 { name: 'Kyle Mundell', guest: true },
+                 { name: 'Filip Rangelov', guest: false },
+                 { name: 'Pablo Lleras', guest: true },
+                 { name: 'Kevin Logan', guest: false },
+                 { name: 'Eric Witzel', guest: false },
+                 { name: 'Brandon Skinner', guest: false },
+                 { name: 'Kerry Cooper', guest: false },
+                 { name: 'Mitch Patterson', guest: true, guest_name: 'Amy Allen' },
+                 { name: 'Mike Lalande', guest: true },
+                 { name: 'Joey House', guest: false },
+                 { name: 'Ryan Spooner', guest: false },
+                 { name: 'Jeremy Nichols', guest: false },
+                 { name: 'Kevin Mcgaire', guest: false },
+                 { name: 'Jake Buller', guest: false },
+                 { name: 'Mike Kovacevic', guest: true },
+                 { name: 'Justin Williams', guest: true },
+                 { name: 'Ashley Baetson', guest: true },
+                 { name: 'Emily Halverson-Duncan', guest: false },
+                 { name: 'Keetje Eichhorn', guest: true },
+                 { name: 'Kaitlyn Burden', guest: false },
+                 { name: 'Lauren Dunlop', guest: false },
+                 { name: 'Morgan Lonc', guest: false },
+                 { name: 'Darren Denomme', guest: true },
+                 { name: 'Guy Buyers', guest: true, guest_name: 'Debbie Buyers' },
+                 { name: 'Charles Lough', guest: true, guest_name: 'Sandy Lough' },
+                 { name: 'Jeffery Lough', guest: true },
+                 { name: 'Erin Lough', guest: false }
+               ])
+johnny = Invite.create(name: 'Johnny Coulas', guest: true, guest_name: 'Janine Coulas')
+Child.create(invite: johnny, name: 'Lyla')
+Child.create(invite: johnny, name: 'Nathan')
+
+mark = Invite.create(name: 'Mark Reid', guest: true, guest_name: 'Missy Reid')
+Child.create(invite: mark, name: 'Jenna')
+Child.create(invite: mark, name: 'Trent')
+Child.create(invite: mark, name: 'Krista')
+
+patti = Invite.create(name: 'Patti Redmond', guest: false )
+Child.create(invite: patti, name: 'Islay')
