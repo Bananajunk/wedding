@@ -13,8 +13,6 @@ test:
 
 production:
   <<: *default
-  host: localhost
-  port: 5432
   database: wedding_production
   username: wedding
   password: <%= ENV['WEDDING_DATABASE_PASSWORD'] %>
