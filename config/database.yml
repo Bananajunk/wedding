@@ -13,6 +13,7 @@ test:
 
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
   database: wedding_production
   username: wedding
   password: <%= ENV['WEDDING_DATABASE_PASSWORD'] %>
