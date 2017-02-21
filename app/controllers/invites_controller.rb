@@ -10,8 +10,8 @@ class InvitesController < ApplicationController
 
   def update
     invite = Invite.find(params[:id])
-    invite.update!(rsvp: true)
-    render json: invite.as_json, status: 200
+    invite.update!(rsvp: true, guest_name: params[:guest_name])
+    render json: invite.as_json(include: :children), status: 200
   rescue ActiveRecord::RecordNotFound => e
     render json: { error: "Could not find invite for code #{params[:code]}" }, status: 404
   rescue => e
