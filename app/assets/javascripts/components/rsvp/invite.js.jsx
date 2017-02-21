@@ -37,8 +37,8 @@ var Invite = React.createClass({
         }
     },
     determineChildren: function () {
-        if (this.props.invite.children.size > 0) {
-            var children = this.props.children.map(function(child){
+        if (this.props.invite.children.length > 0) {
+            var children = this.props.invite.children.map(function(child){
                 return child.name;
             });
             var child_list = children.join();
