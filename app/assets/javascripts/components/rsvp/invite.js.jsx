@@ -1,11 +1,17 @@
 var Invite = React.createClass({
-    confirm: function () {
+    confirm: function (e) {
+        e.preventDefault();
         var guest_name = (this.props.invite.guest_name != null) ? this.props.invite.guest_name : this.refs.guest_name.value;
+        var children = {};
+        $.each($(e.target).find(':checkbox:checked'), function (_index, child) {
+            children[parseInt(child.id.replace('child-', ''))] = true
+        });
         $.ajax({
                 url: "/invites/" + this.props.invite.id,
                 method: "PATCH",
                 data: {
-                    guest_name: guest_name
+                    guest_name: guest_name,
+                    children: children
                 }
             })
             .done(function (invite) {
@@ -38,15 +44,18 @@ var Invite = React.createClass({
     },
     determineChildren: function () {
         if (this.props.invite.children.length > 0) {
-            var children = this.props.invite.children.map(function(child){
-                return child.name;
+            var children = this.props.invite.children.map(function (child) {
+                return (
+                    <div className="checkbox">
+                        <input id={"child-" + child.id} type="checkbox"/>
+                        <label htmlFor={"child-" + child.id}>{child.name}</label>
+                    </div>
+                );
             });
-            var child_list = children.join();
             return (
                 <div id="children">
-                    <p>&</p>
-                    <h4>your children</h4>
-                    <p>({child_list})</p>
+                    <p>Are you bringing your children?</p>
+                    {children}
                 </div>
             );
         } else {
@@ -59,10 +68,12 @@ var Invite = React.createClass({
         return (
             <div>
                 <h4>{this.props.invite.name}</h4>
-                {guest}
-                {children}
-                <p>Thank-you for visiting!</p>
-                <input type="submit" className="btn btn-rsvp form-control" value="Confirm RSVP" onClick={this.confirm}/>
+                <form onSubmit={this.confirm}>
+                    {guest}
+                    {children}
+                    <p>Thank-you for visiting!</p>
+                    <input type="submit" className="btn btn-rsvp form-control" value="Confirm RSVP"/>
+                </form>
             </div>
         )
     }
