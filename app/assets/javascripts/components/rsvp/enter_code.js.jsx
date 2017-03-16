@@ -13,10 +13,12 @@ var EnterCode = React.createClass({
     render: function () {
         return (
             <div className="row">
-                <h4>Enter Code:</h4>
                 <form onSubmit={this.submit}>
-                    <input type="text" className="form-control" ref="code" maxLength="4"/>
-                    <input type="submit" className="btn btn-rsvp form-control"/>
+                    <div className="input-group">
+                        <div className="input-group-addon">Enter Code:</div>
+                        <input type="text" className="form-control" ref="code" maxLength="4"/>
+                    </div>
+                    <input type="submit" className="btn btn-success form-control"/>
                 </form>
             </div>
         )

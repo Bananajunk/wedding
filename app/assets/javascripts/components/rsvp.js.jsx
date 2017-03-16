@@ -23,11 +23,11 @@ var Rsvp = React.createClass({
         if (!(this.state.error === null)) {
             return (
                 <div className="custom-flash row" style={{marginTop: '15px'}}>
-                    <div className=" col-xs-12">
-                        <div className=" alert alert-danger">
-                            <ul className=" fa-ul">
+                    <div className="col-xs-12">
+                        <div className="alert alert-danger">
+                            <ul className="fa-ul">
                                 <li>
-                                    <i className=" fa-li fa fa-exclamation-circle"></i>
+                                    <i className="fa-li fa fa-exclamation-circle"></i>
                                     {this.state.error}
                                 </li>
                             </ul>
@@ -41,7 +41,10 @@ var Rsvp = React.createClass({
     },
     render: function () {
         return (
-            <div id="rsvp">
+            <div id="rsvp" className="container section">
+                <div className="row title">
+                    <h2>RSVP Here</h2>
+                </div>
                 {this.generateDisplay()}
                 {this.generateError()}
             </div>
