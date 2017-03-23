@@ -22,40 +22,40 @@ var Invite = React.createClass({
             }.bind(this));
     },
     determineGuest: function () {
-        if (this.props.invite.guest) {
-            if (this.props.invite.guest_name == null) {
-                return (
-                    <div id="guest">
-                        <p>Would you like to bring a guest?</p>
-                        <input type="text" className="form-control" ref="guest_name"/>
-                    </div>
-                );
-            } else {
-                return (
-                    <div id="guest">
-                        <p>&</p>
-                        <h4>{this.props.invite.guest_name}</h4>
-                    </div>
-                );
-            }
+        if (this.props.invite.guest && this.props.invite.guest_name == null) {
+            return (
+                <div id="guest">
+                    <p>Would you like to bring a guest?</p>
+                    <input type="text" className="form-control" ref="guest_name"/>
+                </div>
+            );
         } else {
             return null;
         }
+    },
+    determineInvite: function () {
+        var invite = this.props.invite.name;
+        if (this.props.invite.guest_name != null) {
+            invite = invite + " & " + this.props.invite.guest_name;
+        }
+        return invite;
     },
     determineChildren: function () {
         if (this.props.invite.children.length > 0) {
             var children = this.props.invite.children.map(function (child) {
                 return (
-                    <div className="checkbox">
+                    <div key={child.id} className="checkbox">
                         <input id={"child-" + child.id} type="checkbox"/>
                         <label htmlFor={"child-" + child.id}>{child.name}</label>
                     </div>
                 );
             });
             return (
-                <div id="children">
+                <div>
                     <p>Are you bringing your children?</p>
-                    {children}
+                    <div id="children">
+                        {children}
+                    </div>
                 </div>
             );
         } else {
@@ -63,16 +63,16 @@ var Invite = React.createClass({
         }
     },
     render: function () {
-        var guest = this.determineGuest();
+        var invite = this.determineInvite();
         var children = this.determineChildren();
         return (
             <div>
-                <h4>{this.props.invite.name}</h4>
+                <h2>{invite}</h2>
                 <form onSubmit={this.confirm}>
-                    {guest}
+                    {this.determineGuest()}
                     {children}
                     <p>Thank-you for visiting!</p>
-                    <input type="submit" className="btn btn-rsvp form-control" value="Confirm RSVP"/>
+                    <input type="submit" className="btn btn-success form-control" value="RSVP"/>
                 </form>
             </div>
         )
