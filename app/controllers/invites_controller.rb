@@ -12,7 +12,8 @@ class InvitesController < ApplicationController
     invite = Invite.find(params[:id])
     invite.update!(rsvp: true, guest_name: params[:guest_name])
     invite.children.each do |child|
-      child.update!(rsvp: params[:children][child.id])
+      rsvp = params[:children][child.id.to_s] == 'true'
+      child.update!(rsvp: rsvp)
     end
     render json: invite.as_json(include: :children), status: 200
   rescue ActiveRecord::RecordNotFound => e
