@@ -25,7 +25,7 @@ var Invite = React.createClass({
         if (this.props.invite.guest && this.props.invite.guest_name == null) {
             return (
                 <div id="guest">
-                    <p>Would you like to bring a guest?</p>
+                    <p>Who is your guest?</p>
                     <input type="text" className="form-control" ref="guest_name"/>
                 </div>
             );
