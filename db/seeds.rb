@@ -45,7 +45,6 @@ Invite.create([
                 { name: 'Joey House', guest: false },
                 { name: 'Ryan Spooner', guest: false },
                 { name: 'Jeremy Nichols', guest: false },
-                { name: 'Kevin Mcgaire', guest: false },
                 { name: 'Jake Buller', guest: false },
                 { name: 'Mike Kovacevic', guest: true, guest_name: 'Emily Champagne' },
                 { name: 'Justin Williams', guest: true, guest_name: 'Megan Elizabeth' },
