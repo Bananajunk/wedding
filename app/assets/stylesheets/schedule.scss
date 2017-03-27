@@ -9,6 +9,9 @@
   .event {
     padding-bottom: 50px;
     .event-image {
+      img {
+        width: 100%;
+      }
     }
     .event-description{
       flex-direction: column;
