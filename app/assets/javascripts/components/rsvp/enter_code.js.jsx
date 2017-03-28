@@ -18,7 +18,7 @@ var EnterCode = React.createClass({
                         <div className="input-group-addon">Enter Code:</div>
                         <input type="text" className="form-control" ref="code" maxLength="4"/>
                     </div>
-                    <input type="submit" className="btn btn-success form-control"/>
+                    <input type="submit" className="btn btn-success form-control" value="Check Code"/>
                 </form>
             </div>
         )
