@@ -9,9 +9,20 @@ var Accommodations = React.createClass({
                     <div className="col-lg-4 accommodations-item">
                         <div className="hotel icon"></div>
                         <h2>BEST WESTERN PLUS Orangeville Inn & Suites</h2>
-                        <p>(519)941-3311<br/>Reference ‘Samantha-Liam Wedding’ for block booking rate.</p>
-                        <a href="http://bestwesternontario.com/hotels/best-western-plus-orangeville-inn-and-suites"
-                           className="btn btn-info btn-radius">Visit Website</a>
+                        <p>Please call for block booking rate<br/>Reference ‘Samantha-Liam Wedding’</p>
+                        <div className="row">
+                            <div className="col-xs-6">
+                                <a className="btn btn-primary" href="tel:5199413311">
+                                    <i className="fa fa-phone fa-lg"></i> Call to Book
+                                </a>
+                            </div>
+                            <div className="col-xs-6">
+                                <a href="http://bestwesternontario.com/hotels/best-western-plus-orangeville-inn-and-suites"
+                                   className="btn btn-info btn-radius">
+                                    <i className="fa fa-globe fa-lg"></i> Visit Website
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <div className="col-lg-4 accommodations-item">
                         <div className="bed icon"></div>
@@ -44,9 +55,11 @@ var Accommodations = React.createClass({
                     <div className="col-lg-4 accommodations-item">
                         <div className="compass icon"></div>
                         <h2>Directions</h2>
-                        <p>7 Buena Vista Drive <br/> Orangeville, ON L9W 0A2</p>
+                        <p>7 Buena Vista Drive <br/> Orangeville, ON L9W 0A2 <br/> <a href="tel:5199413311">(519)941-3311</a></p>
                         <a href="https://goo.gl/maps/zisr7dFrb812"
-                           className="btn btn-info btn-radius">Get Directions</a>
+                           className="btn btn-info btn-radius">
+                            <i className="fa fa-map-o fa-lg"></i> Get Directions
+                        </a>
                     </div>
                 </div>
             </div>

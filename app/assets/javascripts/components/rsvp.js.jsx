@@ -5,6 +5,13 @@ var Rsvp = React.createClass({
             error: null
         })
     },
+    componentDidMount: function(){
+        $('#rsvp-instructions').popover({
+            trigger: 'focus hover',
+            content: 'Your Code is found on the back of the invitation. Enter it below and then confirm your details after we load your info.',
+            placement: 'auto'
+        });
+    },
     setInvite: function (invite, error) {
         this.setState({invite: invite, error: error});
     },
@@ -44,6 +51,10 @@ var Rsvp = React.createClass({
             <div id="rsvp" className="container section">
                 <div className="row title">
                     <h2>RSVP Here</h2>
+                    <span id="rsvp-instructions" className="fa-stack text-muted">
+                        <i className="fa fa-circle-o fa-stack-2x"></i>
+                        <i className="fa fa-question fa-stack-1x"></i>
+                    </span>
                 </div>
                 {this.generateDisplay()}
                 {this.generateError()}

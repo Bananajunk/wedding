@@ -4,6 +4,10 @@
   align-items: center;
   justify-content: center;
   .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
     border-bottom: 2px solid #eeeeee;
     margin-bottom: 25px;
   }
