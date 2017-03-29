@@ -26,7 +26,7 @@ Invite.create([
                 { name: 'Karen Elliot', guest: true, guest_name: 'Joff Elliot', code: 2832 },
                 { name: 'Greg Chiesa', guest: true, guest_name: 'Christina', code: 5089 },
                 { name: 'Gary Nadon', guest: true, guest_name: 'Moreen Nadon', code: 2309 },
-                { name: 'Ceryl Stencil', guest: true, guest_name: 'Beeb Nadon', code: 1432 },
+                { name: 'Cyril Stencil', guest: true, guest_name: 'Beeb Nadon', code: 1432 },
                 { name: 'Mike Albert', guest: true, guest_name: 'Teresa Albert', code: 1579 },
                 { name: 'Megan Hannath', guest: true, guest_name: 'Mohammed Kahn', code: 2347 },
                 { name: 'Kristie Somers', guest: false, code: 1835 },
@@ -56,7 +56,8 @@ Invite.create([
                 { name: 'Darren Denomme', guest: true, code: 2735 },
                 { name: 'Charles Lough', guest: true, guest_name: 'Sandy Lough', code: 1638 },
                 { name: 'Jeffery Lough', guest: true, guest_name: 'Courtney Smith', code: 4534 },
-                { name: 'Erin Lough', guest: false, code: 3746 }
+                { name: 'Erin Lough', guest: false, code: 3746 },
+                { name: 'Chris Neilson', guest: false, code: 2198}
               ])
 johnny = Invite.create(name: 'John Coulas', guest: true, guest_name: 'Janine Coulas', code: 8997)
 Child.create(invite: johnny, name: 'Lyla')
