@@ -19,10 +19,10 @@ var Rsvp = React.createClass({
         if (this.state.invite === null) {
             return <EnterCode setInvite={this.setInvite}/>;
         } else {
-            if (this.state.invite.rsvp) {
-                return <Thanks invite={this.state.invite}/>;
-            } else {
+            if (this.state.invite.rsvp == 'unknown') {
                 return <Invite invite={this.state.invite} setInvite={this.setInvite}/>;
+            } else {
+                return <Thanks invite={this.state.invite}/>;
             }
         }
     },

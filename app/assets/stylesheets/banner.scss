@@ -19,17 +19,21 @@
     max-height: 200px;
     padding: 40px;
     position: relative;
+    text-align: center;
     img {
       position: absolute;
       top: 0;
       left: -100px;
       height: 100%;
+      max-width: 100%;
     }
     h1 {
       margin-bottom: 0;
+      max-width: 100%;
     }
     h2 {
       margin-top: 0;
+      max-width: 100%;
     }
   }
 }

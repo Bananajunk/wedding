@@ -27,5 +27,8 @@
         background-image: image-url('compass_icon.svg');
       }
     }
+    * {
+      max-width: 100%;
+    }
   }
 }

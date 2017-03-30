@@ -10,7 +10,15 @@ class InvitesController < ApplicationController
 
   def update
     invite = Invite.find(params[:id])
-    invite.update!(rsvp: true, guest_name: params[:guest_name])
+    if params[:rsvp] == 'coming'
+      invite.coming!
+    elsif params[:rsvp] == 'not_coming'
+      invite.not_coming!
+    else
+      invite.unknown!
+    end
+    invite.guest_name = params[:guest_name]
+    invite.save!
     invite.children.each do |child|
       rsvp = params[:children][child.id.to_s] == 'true'
       child.update!(rsvp: rsvp)

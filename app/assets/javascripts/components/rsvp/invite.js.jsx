@@ -1,15 +1,22 @@
 var Invite = React.createClass({
-    confirm: function (e) {
-        e.preventDefault();
+    confirm: function () {
         var guest_name = (this.props.invite.guest_name != null) ? this.props.invite.guest_name : this.refs.guest_name.value;
         var children = {};
-        $.each($(e.target).find(':checkbox:checked'), function (_index, child) {
+        $.each($('#children').find(':checkbox:checked'), function (_index, child) {
             children[parseInt(child.id.replace('child-', ''))] = true
         });
+        this.submit('coming', guest_name, children);
+    },
+    reject: function () {
+        var guest_name = (this.props.invite.guest_name != null) ? this.props.invite.guest_name : this.refs.guest_name.value;
+        this.submit('not_coming', guest_name, {});
+    },
+    submit: function (rsvp, guest_name, children) {
         $.ajax({
                 url: "/invites/" + this.props.invite.id,
                 method: "PATCH",
                 data: {
+                    rsvp: rsvp,
                     guest_name: guest_name,
                     children: children
                 }
@@ -68,12 +75,19 @@ var Invite = React.createClass({
         return (
             <div>
                 <h2>{invite}</h2>
-                <form onSubmit={this.confirm}>
-                    {this.determineGuest()}
-                    {children}
-                    <p>Thank-you for visiting!</p>
-                    <input type="submit" className="btn btn-success form-control" value="RSVP"/>
-                </form>
+                {this.determineGuest()}
+                {children}
+                <p>Thank-you for visiting!</p>
+                <div className="row" style={{minWidth: "300px"}}>
+                    <div className="col-xs-6">
+                        <input type="button" className="btn btn-success form-control" value="Coming!"
+                               onClick={this.confirm}/>
+                    </div>
+                    <div className="col-xs-6">
+                        <input type="button" className="btn btn-danger form-control" value="Can't Make It"
+                               onClick={this.reject}/>
+                    </div>
+                </div>
             </div>
         )
     }

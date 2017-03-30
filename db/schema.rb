@@ -28,9 +28,9 @@ ActiveRecord::Schema.define(version: 20170312185611) do
     t.boolean  "guest"
     t.string   "guest_name"
     t.integer  "code"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-    t.boolean  "rsvp",       default: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "rsvp",       default: 0
   end
 
 end
