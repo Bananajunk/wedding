@@ -1,6 +1,11 @@
 var Invite = React.createClass({
     confirm: function () {
-        var guest_name = (this.props.invite.guest_name != null) ? this.props.invite.guest_name : this.refs.guest_name.value;
+        var guest_name = null
+        if (this.props.invite.guest_name != null) {
+            guest_name = this.props.invite.guest_name;
+        } else if(this.refs.guest_name != null) {
+            guest_name = this.refs.guest_name.value;
+        }
         var children = {};
         $.each($('#children').find(':checkbox:checked'), function (_index, child) {
             children[parseInt(child.id.replace('child-', ''))] = true
