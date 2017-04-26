@@ -9,7 +9,7 @@ var Accommodations = React.createClass({
                     <div className="col-lg-4 accommodations-item">
                         <div className="hotel icon"></div>
                         <h2>BEST WESTERN PLUS Orangeville Inn & Suites</h2>
-                        <p>Please call for block booking rate<br/>Reference ‘Samantha-Liam Wedding’</p>
+                        <p>Please call for block booking rate<br/>Reference ‘John-Reid Wedding’</p>
                         <div className="row">
                             <div className="col-xs-6">
                                 <a className="btn btn-primary" href="tel:5199413311">
