@@ -26,6 +26,9 @@
       &.compass {
         background-image: image-url('compass_icon.svg');
       }
+      &.bus {
+        background-image: image-url('bus_icon.svg');
+      }
     }
     * {
       max-width: 100%;
